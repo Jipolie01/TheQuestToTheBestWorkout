@@ -10,4 +10,4 @@
 # 	Variable toelichten met comments
 # 	Om de twee dagen major release
 # 	Functies eerst testen in apart file 
- 
+#	Errors toevoegen bij issue's op github als het niet lukt 
