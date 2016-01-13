@@ -74,7 +74,7 @@ def interface():
 
     Button(window, text="START", command=startTime).grid(row=0, column=1)
     Button(window, text="STOP", command=stopTime).grid(row=0, column=3)
-    Label(window, text="Button voor de ferquentie").grid(row=1, column=2)
+    Label(window, text="Ferquentie").grid(row=1, column=2)
     Button(window, text="O", command=frequencyCounter).grid(row=2, column=2)
     Button(window, text="Bereken Calorieën", command=window.destroy)
 
