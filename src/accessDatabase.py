@@ -1,8 +1,8 @@
 import sqlite3
+
 """opens the client database and sets a cursor in the file"""
 conn = sqlite3.connect('sql/clientDatabase.db')
 c = conn.cursor()
-
 
 """makes and empty list"""
 rows = []
@@ -21,7 +21,7 @@ def checkAccess(column, item):
         return True
     else: return False
 
-"""Check if an item is in de database. Give the column where the item as string then, the item as string.
+"""Check if an item is in de database. Give the column where from the item as string then the item as string.
 Example: checkAccess('name', 'Katrien')
 This will return True"""
 checkAccess('rfidNumber', '[52,188,189,222,235]')
