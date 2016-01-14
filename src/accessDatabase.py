@@ -1,4 +1,5 @@
 import sqlite3
+from time import localtime, strftime
 
 """opens the client database and sets a cursor in the file"""
 conn = sqlite3.connect('sql/clientDatabase.db')
@@ -33,9 +34,11 @@ logInfo      = "(rfidNumber, username, password, email)"
 """You can add a a row of data with the addData(table, column, value) function.
 First define the table you want the add to. Second the column's and lastly the value('s) for the rows."""
 def addData(table, column, value):
-    if table == 'clientInfo' or table == 'subscription' or table == 'adresInfo'or table == 'logInfo':
+    if table == 'clientInfo' or table == 'subscription' or table == 'adresInfo'or table == 'logInfo' or table == 'caloriesInfo':
         c.execute("INSERT INTO "+table+" "+column+" VALUES "+value)
     else: print('ERROR table not found!')
     conn.commit()
 
-#addData('subscription', '(subscriptionName, price)', '(\'test\', 25)')
+localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
+dateEnd = (strftime("%d %b %Y %H"++":%M:%S", localtime()))
+addData('caloriesInfo', '(clientID, date, machine, calories)', '(1, \''+localTime+'\', \'loopband\',300)')
