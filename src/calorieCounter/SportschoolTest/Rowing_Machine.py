@@ -5,7 +5,7 @@ import time
 # This are the global variables for this file
 start = ""
 sportTime = ""
-frequency = ""
+frequency = 0
 
 
 def main():
@@ -39,7 +39,8 @@ def frequencyCounter():
     the O button is pressed.
     """
     global frequency
-    frequency += 1
+    frequency = int(frequency) + 1
+
 
 
 def rowingMachine():
@@ -53,13 +54,13 @@ def rowingMachine():
     startWeight = 10
     # You have two different settings:
     #       - Average
-    if frequency <= 20:
+    if int(frequency) <= 20:
         startCalorie = 74
         calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
         actualCalorie = calorieTotal * sportTime
         print(int(actualCalorie), "Kcal")
     #       - High frequency
-    if frequency > 20:
+    if int(frequency) > 20:
         startCalorie = 90
         calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
         actualCalorie = calorieTotal * sportTime
@@ -76,7 +77,7 @@ def interface():
     Button(window, text="STOP", command=stopTime).grid(row=0, column=3)
     Label(window, text="Ferquentie").grid(row=1, column=2)
     Button(window, text="O", command=frequencyCounter).grid(row=2, column=2)
-    Button(window, text="Bereken Calorieën", command=window.destroy)
+    Button(window, text="Bereken Calorieën", command=window.destroy).grid(row=3)
 
     window.mainloop()
 

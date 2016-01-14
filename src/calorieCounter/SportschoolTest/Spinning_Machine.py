@@ -49,4 +49,5 @@ def interface():
     Button(window, text="Bereken Calorieën", command=window.destroy).grid(row=1)
     window.mainloop()
 
+
 main()
