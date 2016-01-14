@@ -1,5 +1,7 @@
 import sqlite3
 from time import localtime, strftime
+import calorieCounter.SportschoolTest.Rowing_Machine as RM
+
 
 """opens the client database and sets a cursor in the file"""
 conn = sqlite3.connect('sql/clientDatabase.db')
@@ -38,6 +40,9 @@ def addData(table, column, value):
         c.execute("INSERT INTO "+table+" "+column+" VALUES "+value)
     else: print('ERROR table not found!')
     conn.commit()
+
+RM.main()
+#print(test.sportTime)
 
 localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
 dateEnd = (strftime("%d %b %Y %H"++":%M:%S", localtime()))
