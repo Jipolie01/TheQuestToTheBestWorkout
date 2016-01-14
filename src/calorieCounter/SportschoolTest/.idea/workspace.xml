@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c130a20b-c085-4a16-88fe-148d2d83753d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Weightlifting.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rowing_Machine.py" afterPath="$PROJECT_DIR$/Rowing_Machine.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spinning_Machine.py" afterPath="$PROJECT_DIR$/Spinning_Machine.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Weightlifting.py" afterPath="$PROJECT_DIR$/Weightlifting.py" />
     </list>
     <ignored path="SportschoolTest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,19 +48,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Rowing_Machine.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Rowing_Machine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Rowing_Machine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.14319248">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
               <folding>
                 <element signature="e#56#77#0" expanded="true" />
-                <element signature="e#195#323#0" expanded="false" />
-                <element signature="e#347#529#0" expanded="false" />
-                <element signature="e#347#487#1" expanded="false" />
-                <element signature="e#552#741#0" expanded="false" />
-                <element signature="e#772#979#0" expanded="false" />
-                <element signature="e#1998#2486#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -85,14 +77,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Weightlifting.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Weightlifting.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Weightlifting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.42957747">
+              <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
               <folding>
                 <element signature="e#42#63#0" expanded="true" />
-                <element signature="e#121#198#0" expanded="false" />
+                <element signature="e#121#234#0" expanded="false" />
+                <element signature="e#1296#1452#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -121,8 +114,8 @@
         <option value="$PROJECT_DIR$/Treadmill.py" />
         <option value="$PROJECT_DIR$/Spinning_Machine.py" />
         <option value="$PROJECT_DIR$/Gewichtheffen.py" />
-        <option value="$PROJECT_DIR$/Weightlifting.py" />
         <option value="$PROJECT_DIR$/Rowing_Machine.py" />
+        <option value="$PROJECT_DIR$/Weightlifting.py" />
       </list>
     </option>
   </component>
@@ -183,7 +176,121 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../School/HBO-ICT Propedeuse/Miniproject Programming" />
   </component>
-  <component name="RunManager" selected="Python.Rowing_Machine">
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../../accessDatabase.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Rowing_Machine.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../../sql/clientDatabase.db</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/__pycache__/Rowing_Machine.cpython-34.pyc</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../../sql/clientDatabase.db-journal</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunManager" selected="Python.Weightlifting">
     <configuration default="false" name="CalorieTracker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -231,6 +338,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SportschoolTest" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Spinning_Machine.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Weightlifting" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SportschoolTest" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Weightlifting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -357,16 +481,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.CalorieTracker" />
       <item index="1" class="java.lang.String" itemvalue="Python.Rowing_Machine" />
       <item index="2" class="java.lang.String" itemvalue="Python.Spinning_Machine" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Weightlifting" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.Rowing_Machine" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Spinning_Machine" />
-        <item index="2" class="java.lang.String" itemvalue="Python.CalorieTracker" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.Weightlifting" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Rowing_Machine" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Spinning_Machine" />
+        <item index="3" class="java.lang.String" itemvalue="Python.CalorieTracker" />
       </list>
     </recent_temporary>
   </component>
@@ -426,7 +552,8 @@
     <MESSAGE value="Spinning machine added" />
     <MESSAGE value="Spinning machine completed" />
     <MESSAGE value="sportTime changed to minutes" />
-    <option name="LAST_COMMIT_MESSAGE" value="sportTime changed to minutes" />
+    <MESSAGE value="Rowing_machine fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rowing_machine fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -463,12 +590,6 @@
           <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
           <folding>
             <element signature="e#56#77#0" expanded="true" />
-            <element signature="e#195#323#0" expanded="false" />
-            <element signature="e#347#529#0" expanded="false" />
-            <element signature="e#347#487#1" expanded="false" />
-            <element signature="e#552#741#0" expanded="false" />
-            <element signature="e#772#979#0" expanded="false" />
-            <element signature="e#1998#2486#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -516,12 +637,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#56#77#0" expanded="true" />
-            <element signature="e#195#323#0" expanded="false" />
-            <element signature="e#347#529#0" expanded="false" />
-            <element signature="e#347#487#1" expanded="false" />
-            <element signature="e#552#741#0" expanded="false" />
-            <element signature="e#772#979#0" expanded="false" />
-            <element signature="e#1998#2486#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -554,12 +669,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#56#77#0" expanded="true" />
-            <element signature="e#195#323#0" expanded="false" />
-            <element signature="e#347#529#0" expanded="false" />
-            <element signature="e#347#487#1" expanded="false" />
-            <element signature="e#552#741#0" expanded="false" />
-            <element signature="e#772#979#0" expanded="false" />
-            <element signature="e#1998#2486#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,6 +713,16 @@
             <element signature="e#1378#1570#0" expanded="false" />
             <element signature="e#1378#1460#1" expanded="false" />
             <element signature="e#1594#2912#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rowing_Machine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+          <folding>
+            <element signature="e#56#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -625,27 +744,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Weightlifting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.42957747">
+          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
           <folding>
             <element signature="e#42#63#0" expanded="true" />
-            <element signature="e#121#198#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rowing_Machine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14319248">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="e#56#77#0" expanded="true" />
-            <element signature="e#195#323#0" expanded="false" />
-            <element signature="e#347#529#0" expanded="false" />
-            <element signature="e#347#487#1" expanded="false" />
-            <element signature="e#552#741#0" expanded="false" />
-            <element signature="e#772#979#0" expanded="false" />
-            <element signature="e#1998#2486#0" expanded="false" />
+            <element signature="e#121#234#0" expanded="false" />
+            <element signature="e#1296#1452#0" expanded="false" />
           </folding>
         </state>
       </provider>
