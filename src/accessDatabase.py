@@ -1,5 +1,4 @@
 import sqlite3
-from time import localtime, strftime
 import calorieCounter.SportschoolTest.Rowing_Machine as RM
 
 
@@ -42,8 +41,8 @@ def addData(table, column, value):
     conn.commit()
 
 RM.main()
-#print(test.sportTime)
+endTime = int(RM.sportTime*3600)
+print(endTime)
 
-localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
-dateEnd = (strftime("%d %b %Y %H"++":%M:%S", localtime()))
-addData('caloriesInfo', '(clientID, date, machine, calories)', '(1, \''+localTime+'\', \'loopband\',300)')
+
+addData('caloriesInfo', '(clientID, date, dateEnd, machine, calories)', '(1, \''+RM.localTime+'\',\''+RM.dateEnd+'\', \'loopband\',300)')

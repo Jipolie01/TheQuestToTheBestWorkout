@@ -1,6 +1,7 @@
 # This is a file used for the rowing machine in the gym
 from tkinter import *
 import time
+from time import localtime, strftime
 
 # This are the global variables for this file
 start = ""
@@ -21,6 +22,8 @@ def startTime():
     This function is the one who start the timer for the sportTime, this function is called when the start button is
     pressed
     """
+    global localTime
+    localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
     global start
     start = time.clock()
 
@@ -29,6 +32,8 @@ def stopTime():
     """
     This function is used to determine the time passed, this function is called when the stop button is pressed.
     """
+    global dateEnd
+    dateEnd = (strftime("%d %b %Y %H:%M:%S", localtime()))
     global sportTime
     sportTime = (time.clock() - start)/3600
 
@@ -80,6 +85,3 @@ def interface():
     Button(window, text="Bereken Calorieën", command=window.destroy).grid(row=3)
 
     window.mainloop()
-
-main()
-
