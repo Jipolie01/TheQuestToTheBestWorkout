@@ -21,7 +21,7 @@ def startTime():
 
 def stopTime():
     global sportTime
-    sportTime = (time.clock() - start) / 3600
+    sportTime = (time.clock() - start) / 60
 
 
 def spinningMachine():
@@ -31,10 +31,11 @@ def spinningMachine():
     clientWeight = 70
     startWeight = 10
     global sportTime
+    hourTime = sportTime / 60
     # Spinning has only one setting
     startCalorie = 117
     calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
-    actualCalorie = calorieTotal * sportTime
+    actualCalorie = calorieTotal * hourTime
     print(int(actualCalorie), "Kcal")
 
 
