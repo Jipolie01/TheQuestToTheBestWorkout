@@ -8,20 +8,34 @@ c = conn.cursor()
 rows = []
 
 """Selects a column from the client database and removes brackets and quotation marks."""
-def readData(column):
-    for row in c.execute("SELECT " +column+ " FROM clientInfo"):
+def readData(table, column):
+    for row in c.execute("SELECT " +column+ " FROM " +table):
         rowN = (str(row).replace(')', '').replace('(','').replace("'", ""))
         rowN = rowN[:-1]
         rows.append(rowN)
 
-"""Checks if an item is in de rows list and returns true or false based on that."""
-def checkAccess(column, item):
-    readData(column)
+"""Check if an item is in de database and returns true or false based on that.
+Give the table, the column and the item as string like this: checkExistence('table', 'column', 'item')."""
+def checkExistence(table, column, item):
+    readData(table, column)
     if item in rows:
         return True
     else: return False
 
-"""Check if an item is in de database. Give the column where from the item as string then the item as string.
-Example: checkAccess('name', 'Katrien')
-This will return True"""
-checkAccess('rfidNumber', '[52,188,189,222,235]')
+"""
+table name:  | column's:
+clientInfo   = "(rfidNumber, surname, name, gender, cellphoneNumber, adresNumber, zipcode, subscriptionName)"
+subscription = "(subscriptionName, price)"
+adresInfo    = "(adresNumber, zipcode, street, town, country)"
+logInfo      = "(rfidNumber, username, password, email)"
+"""
+
+"""You can add a a row of data with the addData(table, column, value) function.
+First define the table you want the add to. Second the column's and lastly the value('s) for the rows."""
+def addData(table, column, value):
+    if table == 'clientInfo' or table == 'subscription' or table == 'adresInfo'or table == 'logInfo':
+        c.execute("INSERT INTO "+table+" "+column+" VALUES "+value)
+    else: print('ERROR table not found!')
+    conn.commit()
+
+#addData('subscription', '(subscriptionName, price)', '(\'test\', 25)')
