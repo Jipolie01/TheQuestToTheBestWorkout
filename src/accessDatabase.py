@@ -1,6 +1,6 @@
 import sqlite3
 import calorieCounter.SportschoolTest.Rowing_Machine as RM
-
+import mysql.connector
 
 """opens the client database and sets a cursor in the file"""
 conn = sqlite3.connect('sql/clientDatabase.db')
