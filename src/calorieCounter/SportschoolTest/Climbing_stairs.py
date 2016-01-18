@@ -45,7 +45,7 @@ def climbingStairs():
     startWeight = 10
     global sportTime
     hourTime = sportTime / 60
-    # Climbing stairs only has one version
+    # Climbing stairs only has one setting
     startCalorie = 60
     calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
     actualCalorie = calorieTotal * hourTime
