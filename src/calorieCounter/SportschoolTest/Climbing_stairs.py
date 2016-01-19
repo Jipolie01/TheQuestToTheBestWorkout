@@ -10,6 +10,8 @@ def main():
     This is the main function all the other functions are called from here
     """
     interface()
+    climbingStairs()
+
 
 def startTime():
     """
@@ -36,6 +38,7 @@ def interface():
     Button(window, text="STOP", command=stopTime).grid(row=0, column=1)
     Button(window, text="Bereken calorieën", command=window.destroy).grid(row=1)
     window.mainloop()
+
 
 def climbingStairs():
     """
