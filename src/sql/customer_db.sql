@@ -10,9 +10,12 @@ create table if not exists customerInfo (
     primary key(customerID)
 );
 
-insert into customerInfo (customerID, surname, name, gender, RFIDNumber, cellphoneNumber, subscriptionName)
-	values (1, 'Plugge', 'Riemer', 'male', '[52,188,222,235]', '06-80971817', 'flex'); 
+delete from customerInfo where customerID=1;
 
+insert into customerInfo (customerID, surname, name, gender, RFIDNumber, cellphoneNumber, subscriptionName)
+	values (1, 'Plugge', 'Riemer', 'male', '[52,188,189,222,235]', '06-80971817', 'flex'); 
+insert into customerInfo (customerID, surname, name, gender, RFIDNumber, cellphoneNumber, subscriptionName)
+	values (2, 'Breen', 'Trienke', 'female', '[12,235,179,213,129]', '06-82150427', 'smart');
 
 create table if not exists adresInfo (
 	customerID		int unsigned	not null auto_increment,
@@ -28,6 +31,8 @@ create table if not exists adresInfo (
 
 insert into adresInfo (customerID, street, zipcode, adresNumber, town, country)
 	values (1, 'De Beers', '5373CZ', '17', 'Herpen', 'Nederland');
+insert into adresInfo (customerID, street, zipcode, adresNumber, town, country)
+	values (2, 'Essenseweg', '4709BL', '105', 'Nispen', 'Nederland');
 
 create table if not exists loginInfo (
 	customerID		int unsigned	not null auto_increment,
@@ -39,8 +44,6 @@ create table if not exists loginInfo (
 	primary key(customerID),
     foreign key(customerID) references customerInfo(customerID)
 );
-
-
 
 create table if not exists products (
 	subscriptionName varchar(5)			not null default '',

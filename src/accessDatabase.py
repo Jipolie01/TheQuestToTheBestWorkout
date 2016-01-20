@@ -44,4 +44,4 @@ RM.main()
 endTime = int(RM.sportTime*3600)
 print(endTime)
 
-addData('caloriesInfo', '(clientID, date, dateEnd, machine, calories)', '(1, \''+RM.localTime+'\',\''+RM.dateEnd+'\', \'loopband\',300)')
+#addData('caloriesInfo', '(clientID, date, dateEnd, machine, calories)', '(1, \''+RM.localTime+'\',\''+RM.dateEnd+'\', \'loopband\',300)')

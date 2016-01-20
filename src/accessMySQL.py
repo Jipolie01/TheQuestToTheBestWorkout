@@ -3,11 +3,11 @@ from mysql.connector import errorcode
 import getpass
 
 def connectDatabase():
-    p = getpass.getpass("Enter password: ")
+    #p = getpass.getpass("Enter password: ")
 
     try:
         global cnx
-        cnx = sql.connect(user='admin', password=p,
+        cnx = sql.connect(user='admin', password='geheim',
                           host = 'bennos-sportschool.adeklerk.nl',
                           database = 'customer_db')
 
@@ -22,22 +22,21 @@ def connectDatabase():
         print("connected to database")
 
 
-def getData():
+def getData(column ,table):
     connectDatabase()
+    global cursor
     cursor = cnx.cursor(buffered=True)
 
     query = (
-        "SELECT RFIDNumber, surname, name FROM customerInfo"
+        "SELECT {} FROM {}".format(column, table)
     )
 
     cursor.execute(query)
 
-    for RFIDNumber, surname, name in cursor:
-        print("{} {} has RFID number {}".format(name, surname, RFIDNumber))
+    return cursor
 
     disconnectDatabase()
 
 def disconnectDatabase():
+    cursor.close()
     cnx.close()
-
-getData()
