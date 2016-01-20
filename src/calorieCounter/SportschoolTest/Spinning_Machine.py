@@ -15,13 +15,19 @@ def main():
 
 
 def startTime():
+    """
+    This function is used to start the timer, this function is called when the start button is pressed
+    """
     global start
     start = time.clock()
 
 
 def stopTime():
+    """
+    This function is used to determine the time passed, this function is called when the stop button is pressed.
+    """
     global sportTime
-    sportTime = (time.clock() - start) / 60
+    sportTime = (time.clock() - start) / 3600
 
 
 def spinningMachine():

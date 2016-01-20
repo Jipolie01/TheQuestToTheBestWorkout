@@ -45,7 +45,7 @@ def settings4():
 
 
 def settings5():
-    """ This is a function that makes the setting = 5 when the setting 5 button is pressed"""
+    """This is a function that makes the setting = 5 when the setting 5 button is pressed"""
     global setting
     setting = 5
     print(setting)
