@@ -3,11 +3,11 @@ from mysql.connector import errorcode
 import getpass
 
 def connectDatabase():
-    #p = getpass.getpass("Enter password: ")
+    p = getpass.getpass("Enter password: ")
 
     try:
         global cnx
-        cnx = sql.connect(user='admin', password='geheim',
+        cnx = sql.connect(user='admin', password=p,
                           host = 'bennos-sportschool.adeklerk.nl',
                           database = 'customer_db')
 
