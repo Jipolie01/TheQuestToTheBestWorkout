@@ -25,7 +25,7 @@ def startTime():
     pressed
     """
     global localTime
-    localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
+    localTime = (strftime("%Y %b %d %H:%M:%S", localtime()))
     global start
     start = time.clock()
 
@@ -35,7 +35,7 @@ def stopTime():
     This function is used to determine the time passed, this function is called when the stop button is pressed.
     """
     global dateEnd
-    dateEnd = (strftime("%d %b %Y %H:%M:%S", localtime()))
+    dateEnd = (strftime("%Y %b %d %H:%M:%S", localtime()))
     global sportTime
     sportTime = (time.clock() - start)/3600
 
