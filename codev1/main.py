@@ -339,7 +339,10 @@ def login():
             rowCounter += 1
         sleep(0.1)
 
-
+def  getcustomerId():
+	local ID = gD.getDataWhere('customerID', 'loginInfo', 'RFIDNumber={}'.format(str(cardData)))
+	return ID
+		
 def treadmill():
     """
         callable function to be able to start running on a treadmill

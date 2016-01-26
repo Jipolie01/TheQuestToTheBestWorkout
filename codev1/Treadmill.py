@@ -1,7 +1,7 @@
 # This file contains a calorietracker the treadmill in the gym
 import time
 from Tkinter import *
-
+import main as mn
 
 # These are the global variables for this file
 setting = ""
@@ -18,6 +18,7 @@ def main():
     #window = getWindow
     interface()
     treadmill()
+	ID = mn.getcustomerId
 
 
 def settings1():

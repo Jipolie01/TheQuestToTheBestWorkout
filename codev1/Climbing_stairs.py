@@ -1,6 +1,8 @@
 # This is a file for climbing stairs
 from Tkinter import *
 import time
+import getData as gD
+import main as mn
 
 start = ""
 
@@ -11,12 +13,15 @@ def main():
     """
     interface()
     climbingStairs()
+	ID = mn.getcustomerId
 
 
 def startTime():
     """
     This function is used to start the timer, this function is called when the start button is pressed
     """
+	global localTime
+    localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
     global start
     start = time.clock()
 
@@ -25,6 +30,8 @@ def stopTime():
     """
     This function is used to determine the time passed, this function is called when the stop button is pressed.
     """
+	global dateEnd
+    dateEnd = (strftime("%d %b %Y %H:%M:%S", localtime()))
     global sportTime
     sportTime = (time.clock() - start) / 3600
 
@@ -53,4 +60,3 @@ def climbingStairs():
     calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
     actualCalorie = calorieTotal * hourTime
     print(int(actualCalorie), "Kcal")
-

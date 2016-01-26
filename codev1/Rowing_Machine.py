@@ -2,6 +2,8 @@
 from Tkinter import *
 import time
 from time import localtime, strftime
+import main as mn
+import getData as gD
 
 # This are the global variables for this file
 start = ""
@@ -13,9 +15,9 @@ def main():
     """
     This is the main function, this function is used to call all other functions
     """
+	ID = mn.getcustomerId
     interface()
     rowingMachine()
-
 
 def startTime():
     """
@@ -55,7 +57,7 @@ def rowingMachine():
     # This machine has an interface that count how many time you do a excersises in a certian time
     global frequency  # This number is based on doing 20 excersises in a minute wich is average tempo
     global sportTime  # Time in hours
-    clientWeight = 70  # Weight of the client that comes form the database
+    clientWeight = gD.getDataWhere('weight', 'customerInfo', '{}'.format(ID))  # Weight of the client that comes form the database
     startWeight = 10
     # You have two different settings:
     #       - Average
@@ -70,6 +72,7 @@ def rowingMachine():
         calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
         actualCalorie = calorieTotal * sportTime
         print(int(actualCalorie), "Kcal")
+	gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, BurntCalories)', '{}, {}, {}, RowingMachine, {}'.format(ID, localTime, dateEnd, actualCalorie))
 
 
 def interface():

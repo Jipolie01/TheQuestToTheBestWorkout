@@ -1,6 +1,7 @@
 # This file is used for the weightlifting
 from Tkinter import *
 import time
+import main as mn
 
 start = ""
 sportTime = ""
@@ -12,6 +13,7 @@ def main():
     """
     interface()
     weightlifting()
+	ID = mn.getcustomerId
 
 
 def interface():
@@ -50,6 +52,8 @@ def startTime():
     """
     This function is used to start the timer, this function is called when the start button is pressed
     """
+	global localTime
+    localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
     global start
     start = time.clock()
 
@@ -58,6 +62,8 @@ def stopTime():
     """
     This function is used to stop the timer, and is called when the stop button is pressed
     """
+	global dateEnd
+    dateEnd = (strftime("%d %b %Y %H:%M:%S", localtime()))
     global sportTime
     sportTime = (time.clock() - start)/3600
 
