@@ -1,0 +1,103 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18-jan-2016, 11:37:35
+    Author     : timijntema
+*/
+
+
+/*
+    class for the navigation buttons
+*/
+.navigationButton {
+    background-color: transparent;
+    border-radius:12px;
+    border-color: green;
+    border-width: 5px;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    width: 150px;
+    margin: 10px;
+}
+
+.navigationButton:hover{
+    background-color: green;
+}
+
+/*
+    navigation bar class voor de navigatiekolom
+*/
+.navigationBar{
+    text-align: center;
+    position: fixed;
+    border-radius: 12px;
+    border-width: 5px;
+    border-color: red;
+    background-color: blue;
+    border-style: solid;
+    left: 2%;
+    top: 25%;
+    width: 16%;
+    height: 70%;
+}
+
+.logindiv{
+    text-align: center;
+    position: fixed;
+    border-radius: 12px;
+    border-width: 7px;
+    border-color: red;
+    border-style: solid;
+    background-color: lightgreen;
+    left: 47%;
+    top: 47%;
+    width: 350px;
+    height:220px;
+}
+/*
+.logoImage{
+    width: 600px;
+    height: 300px;
+    border-color: orange;
+    border-style: 7px;
+    //margin: 0;
+    //padding: 0;
+}
+*/
+
+.mainpage{
+    //text-align: center;
+    position: fixed;
+    border-radius: 12px;
+    border-width: 5px;
+    border-color: brown;
+    background-color: darkorange;
+    border-style: solid;
+    left: 20%;
+    top: 25%;
+    width: 78%;
+    height: 70%;
+}
+
+.changeInformation{
+    margin: 8.5px;
+}
+
+.textboxesdiv{
+    left: 54%;
+    width: 240px;
+    position: fixed;
+}
+
+.text{
+    left: 47%;
+    width: 240px;
+    position: fixed;
+}

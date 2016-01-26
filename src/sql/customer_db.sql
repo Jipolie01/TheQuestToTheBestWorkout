@@ -45,6 +45,12 @@ create table if not exists loginInfo (
     foreign key(customerID) references customerInfo(customerID)
 );
 
+insert into loginInfo (customerID, username, password, email, LogedIn)
+	values (1, 'Riemer01', 'Riemer01', 'riemer.plugge@gmail.com', false);
+insert into loginInfo (customerID, username, password, email, LogedIn)
+	values (2, 'Trienke65', 'Trienke65', 'trienke.breen@hotmail.com', false);
+
+
 create table if not exists products (
 	subscriptionName varchar(5)			not null default '',
     price			 decimal(4,2)		not null default 00.00,
