@@ -11,3 +11,4 @@ getWeight = gD.getDataWhere('weight', 'customerInfo', customerID)
 
 gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
               '{}, \'{}\', \'{}\', \'{}\', {}'.format(customerID, startTime, endTime, device, actualCalories))
+

@@ -61,8 +61,8 @@ def startTime():
     This function is the one who start the timer for the sportTime, this function is called when the start button is
     pressed
     """
-    global localTime
-    localTime = (time.strftime("%d %b %Y %H:%M:%S", time.localtime()))#time. added 2x
+    global startTime
+    startTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     global start
     start = time.clock()
 
@@ -71,8 +71,8 @@ def stopTime():
     """
     This function is used to determine the time passed, this function is called when the stop button is pressed.
     """
-    global dateEnd
-    dateEnd = (time.strftime("%d %b %Y %H:%M:%S", time.localtime()))#time. added 2x
+    global endTime
+    endTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     global sportTime
     sportTime = (time.clock() - start)/3600
 
@@ -110,7 +110,8 @@ def treadmill():
     actualCalorie = calorieTotal * timeHours
     actualCalorie = int(actualCalorie)
     print(actualCalorie, "Kcal")
-
+    gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
 
 def interface():
     """

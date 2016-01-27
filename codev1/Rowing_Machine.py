@@ -15,6 +15,7 @@ def main():
     """
     This is the main function, this function is used to call all other functions
     """
+    global ID
 	ID = mn.getcustomerId
     interface()
     rowingMachine()
@@ -24,8 +25,8 @@ def startTime():
     This function is the one who start the timer for the sportTime, this function is called when the start button is
     pressed
     """
-    global localTime
-    localTime = (strftime("%Y %b %d %H:%M:%S", localtime()))
+    global startTime
+    startTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     global start
     start = time.clock()
 
@@ -34,8 +35,8 @@ def stopTime():
     """
     This function is used to determine the time passed, this function is called when the stop button is pressed.
     """
-    global dateEnd
-    dateEnd = (strftime("%Y %b %d %H:%M:%S", localtime()))
+    global endTime
+    endTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     global sportTime
     sportTime = (time.clock() - start)/3600
 
@@ -48,8 +49,6 @@ def frequencyCounter():
     global frequency
     frequency = int(frequency) + 1
 
-
-
 def rowingMachine():
     """
     This function is used to count calories for the rowing machine
@@ -58,6 +57,7 @@ def rowingMachine():
     global frequency  # This number is based on doing 20 excersises in a minute wich is average tempo
     global sportTime  # Time in hours
     clientWeight = gD.getDataWhere('weight', 'customerInfo', '{}'.format(ID))  # Weight of the client that comes form the database
+    clientWeight = clientWeight[0][0]
     startWeight = 10
     # You have two different settings:
     #       - Average
@@ -72,8 +72,8 @@ def rowingMachine():
         calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
         actualCalorie = calorieTotal * sportTime
         print(int(actualCalorie), "Kcal")
-	gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, BurntCalories)', '{}, {}, {}, RowingMachine, {}'.format(ID, localTime, dateEnd, actualCalorie))
-
+	gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
 
 def interface():
     """

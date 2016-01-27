@@ -46,14 +46,16 @@ def weightlifting():
         calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
         actualCalorie = calorieTotal * sportTime
         print(int(actualCalorie), "Kcal")
+    gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
 
 
 def startTime():
     """
     This function is used to start the timer, this function is called when the start button is pressed
     """
-	global localTime
-    localTime = (strftime("%d %b %Y %H:%M:%S", localtime()))
+    global startTime
+    startTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     global start
     start = time.clock()
 
@@ -62,8 +64,8 @@ def stopTime():
     """
     This function is used to stop the timer, and is called when the stop button is pressed
     """
-	global dateEnd
-    dateEnd = (strftime("%d %b %Y %H:%M:%S", localtime()))
+    global endTime
+    endTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     global sportTime
     sportTime = (time.clock() - start)/3600
 
