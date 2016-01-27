@@ -426,3 +426,5 @@ mainFunction()
 # toevoegen pas al in gebruik aanmaken van account
 # exiting gaat heel snel
 #bycicle might be wrong
+
+mysql -u admin -p
