@@ -20,7 +20,6 @@ class ExampleApp(tk.Tk):
         y=0
         for i in data:
             for r in i:
-                print(r)
                 t.set(x,y,r)
                 y+=1
                 if y==6:
