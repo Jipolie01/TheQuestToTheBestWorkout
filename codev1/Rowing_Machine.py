@@ -16,7 +16,7 @@ def main():
     This is the main function, this function is used to call all other functions
     """
     global ID
-	ID = mn.getcustomerId
+    ID = mn.getcustomerId
     interface()
     rowingMachine()
 
@@ -73,7 +73,7 @@ def rowingMachine():
         actualCalorie = calorieTotal * sportTime
         print(int(actualCalorie), "Kcal")
 	gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
-              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalorie))
 
 def interface():
     """

@@ -13,7 +13,8 @@ def main():
     """
     interface()
     climbingStairs()
-	ID = mn.getcustomerId
+    global ID
+    ID = mn.getcustomerId()
 
 
 def startTime():
@@ -62,4 +63,4 @@ def climbingStairs():
     actualCalorie = calorieTotal * hourTime
     print(int(actualCalorie), "Kcal")
     gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
-              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalorie))

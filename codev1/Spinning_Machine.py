@@ -2,6 +2,7 @@
 from Tkinter import *
 import time
 import main as mn
+import getData as gD
 
 start = ""
 sportTime = ""
@@ -13,7 +14,8 @@ def main():
     """
     interface()
     spinningMachine()
-	ID = mn.getcustomerId
+    global ID
+    ID = mn.getcustomerId()
 
 def startTime():
     """
@@ -49,7 +51,7 @@ def spinningMachine():
     actualCalorie = calorieTotal * hourTime
     print(int(actualCalorie), "Kcal")
     gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
-              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalorie))
 
 def interface():
     """

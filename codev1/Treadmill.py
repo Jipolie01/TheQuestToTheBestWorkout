@@ -2,6 +2,7 @@
 import time
 from Tkinter import *
 import main as mn
+import getData as gD
 
 # These are the global variables for this file
 setting = ""
@@ -18,7 +19,8 @@ def main():
     #window = getWindow
     interface()
     treadmill()
-	ID = mn.getcustomerId
+    global ID
+    ID = mn.getcustomerId()
 
 
 def settings1():
@@ -111,7 +113,7 @@ def treadmill():
     actualCalorie = int(actualCalorie)
     print(actualCalorie, "Kcal")
     gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
-              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalories))
+              '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalorie))
 
 def interface():
     """

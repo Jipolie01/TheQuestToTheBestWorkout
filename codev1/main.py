@@ -14,6 +14,7 @@ import Spinning_Machine
 import Weightlifting
 import Climbing_stairs
 import getData as gD
+import WhoLogedIn as wli
 
 servoPin  = 12# This is the pin the servo is connected to
 ledRed = 33# This is the pin the red cicuit of the rgb led is connected to
@@ -419,12 +420,10 @@ def loginThreads():
     scanPass.mainloop()
     mainFunction()
 
-
 setup()
 mainFunction()
+wli.app.mainloop()
 
 # toevoegen pas al in gebruik aanmaken van account
 # exiting gaat heel snel
 #bycicle might be wrong
-
-mysql -u admin -p
