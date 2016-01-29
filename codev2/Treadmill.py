@@ -1,24 +1,25 @@
 # This file contains a calorietracker the treadmill in the gym
 import time
-from Tkinter import *
-import main as mn
+from tkinter import *
 import getData as gD
+
 
 # These are the global variables for this file
 setting = ""
 start = ""
-timeHours = ""
+sportTime= ""
 
 
 
-def main():
+def main(customerID):
     """
     This function is the main function in the program
     """
+    global ID
+
+    ID = customerID
     interface()
     treadmill()
-    global ID
-    ID = mn.getcustomerId()
 
 
 def settings1():
@@ -61,20 +62,20 @@ def startTime():
     This function is the one who start the timer for the sportTime, this function is called when the start button is
     pressed
     """
-    global startTime
-    startTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+    global localTime
+    localTime = (time.strftime("%d %b %Y %H:%M:%S", time.localtime()))#time. added 2x
     global start
-    start = time.clock()
+    start = time.time()
 
 
 def stopTime():
     """
     This function is used to determine the time passed, this function is called when the stop button is pressed.
     """
-    global endTime
-    endTime = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+    global dateEnd
+    dateEnd = (time.strftime("%d %b %Y %H:%M:%S", time.localtime()))#time. added 2x
     global sportTime
-    sportTime = (time.clock() - start)/3600
+    sportTime = (time.time() - start)/3600
 
 
 def treadmill():
@@ -82,7 +83,9 @@ def treadmill():
     This function is a calorietracker for running on a treadmill with different settings for the speed of the runner
     """
     global setting
-    clientWeight = 85  # This value should be acquired out of the database
+    global sportTime
+    clientWeight = gD.getDataWhere('weight', 'customerInfo', '{}'.format(ID))  # Weight of the client that comes form the database
+    clientWeight = clientWeight[0][0]
     startWeight = 10
     # Different setting on the treadmill:
 
@@ -107,11 +110,13 @@ def treadmill():
         startCalorie = 150
         calorieTotal = (startCalorie * ((clientWeight/startWeight)-1)) + startCalorie
     # Calculating the amount of burned calories with the time the client actually ran
-    actualCalorie = calorieTotal * timeHours
+    actualCalorie = (int(calorieTotal) * sportTime)
     actualCalorie = int(actualCalorie)
     print(actualCalorie, "Kcal")
     gD.insertData('customerPerformanceInfo (customerID, startSession, endSession, fitnessDevice, burntCalories)',
               '{}, \'{}\', \'{}\', \'Rowing Machine\', {}'.format(ID, startTime, endTime, actualCalorie))
+
+
 
 def interface():
     """
